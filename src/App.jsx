@@ -1,122 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const sectionPlaceholderStyle = {
+    padding: '8rem 0',
+    textAlign: 'center',
+    borderBottom: '1px dashed #e5e7eb'
+  };
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      {/* Barre de navigation fixée en haut */}
+      <Header />
 
-      <div className="ticks"></div>
+      {/* Zone de contenu de la Landing Page */}
+      <main style={{ marginTop: '70px' }}>
+        
+        {/* Squelette de la section Hero */}
+        <section id="hero" style={{ ...sectionPlaceholderStyle, backgroundColor: '#f9fafb' }}>
+          <div className="container">
+            <h2>[Section Accueil / Hero]</h2>
+            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Futur emplacement du titre accrocheur, de l'illustration et du bouton principal.</p>
+          </div>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {/* Squelette de la section Fonctionnalités */}
+        <section id="features" style={sectionPlaceholderStyle}>
+          <div className="container">
+            <h2>[Section Fonctionnalités]</h2>
+            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Futur emplacement des cartes d'avantages produits réutilisables.</p>
+          </div>
+        </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        {/* Squelette de la section À propos */}
+        <section id="about" style={{ ...sectionPlaceholderStyle, backgroundColor: '#f9fafb' }}>
+          <div className="container">
+            <h2>[Section À propos]</h2>
+            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Présentation du public ciblé et du problème résolu.</p>
+          </div>
+        </section>
+
+        {/* Squelette de la section Témoignages */}
+        <section id="testimonials" style={sectionPlaceholderStyle}>
+          <div className="container">
+            <h2>[Section Témoignages]</h2>
+            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Avis statiques et retours utilisateurs.</p>
+          </div>
+        </section>
+
+        {/* Squelette de la section Contact / CTA */}
+        <section id="contact" style={{ ...sectionPlaceholderStyle, backgroundColor: '#f9fafb' }}>
+          <div className="container">
+            <h2>[Section Contact / CTA]</h2>
+            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Formulaire de contact contrôlé et appel à l'action final.</p>
+          </div>
+        </section>
+
+      </main>
+
+      {/* Pied de page global */}
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
