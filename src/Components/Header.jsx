@@ -13,21 +13,21 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <a href="#" className={styles.logo} onClick={closeMenu}>
-          Flex<span>Sol</span>
+          Dev<span>Sol</span>
         </a>
 
         <nav className={styles.desktopNav}>
           <ul className={styles.navLinks}>
-            <li><a href="#features">Fonctionnalités</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#testimonials">Avis</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div className={styles.desktopCta}>
           <a href="#contact" className={styles.ctaButton}>
-            Essayer gratuitement <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '8px' }} />
+            Try it for free <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '8px' }} />
           </a>
         </div>
 
@@ -38,13 +38,13 @@ export default function Header() {
 
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
         <ul className={styles.mobileNavLinks}>
-          <li><a href="#features" onClick={closeMenu}>Fonctionnalités</a></li>
-          <li><a href="#about" onClick={closeMenu}>À propos</a></li>
-          <li><a href="#testimonials" onClick={closeMenu}>Avis</a></li>
+          <li><a href="#features" onClick={closeMenu}>Features</a></li>
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#testimonials" onClick={closeMenu}>Testimonials</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
           <li className={styles.mobileCtaItem}>
             <a href="#contact" className={styles.ctaButton} onClick={closeMenu}>
-              Essayer gratuitement <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '8px' }} />
+              Try it for free <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '8px' }} />
             </a>
           </li>
         </ul>

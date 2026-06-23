@@ -1,7 +1,10 @@
 import Header from './components/Header';
+import Hero from './Components/Hero';
+import Features from './Components/Features';
 import Footer from './components/Footer';
 
 export default function App() {
+  
   const sectionPlaceholderStyle = {
     padding: '8rem 0',
     textAlign: 'center',
@@ -15,22 +18,8 @@ export default function App() {
 
       {/* Zone de contenu de la Landing Page */}
       <main style={{ marginTop: '70px' }}>
-        
-        {/* Squelette de la section Hero */}
-        <section id="hero" style={{ ...sectionPlaceholderStyle, backgroundColor: '#f9fafb' }}>
-          <div className="container">
-            <h2>[Section Accueil / Hero]</h2>
-            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Futur emplacement du titre accrocheur, de l'illustration et du bouton principal.</p>
-          </div>
-        </section>
-
-        {/* Squelette de la section Fonctionnalités */}
-        <section id="features" style={sectionPlaceholderStyle}>
-          <div className="container">
-            <h2>[Section Fonctionnalités]</h2>
-            <p style={{ color: '#4b5563', marginTop: '0.5rem' }}>Futur emplacement des cartes d'avantages produits réutilisables.</p>
-          </div>
-        </section>
+        <Hero/>
+        <Features/>
 
         {/* Squelette de la section À propos */}
         <section id="about" style={{ ...sectionPlaceholderStyle, backgroundColor: '#f9fafb' }}>
