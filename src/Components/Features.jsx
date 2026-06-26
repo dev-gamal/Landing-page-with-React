@@ -30,7 +30,7 @@ export default function Features() {
     <section id="features" className={styles.features}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Pourquoi choisir notre solution ?</h2>
+          <h2 className={styles.sectionTitle}>Why choosing our solution ?</h2>
           <p className={styles.sectionSubtitle}>
             Discover all the built-in tools designed specifically to take your workflow to the next level.
           </p>
