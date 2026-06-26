@@ -1,51 +1,87 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import styles from './About.module.css';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheckCircle,
+  faChevronDown,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
+import styles from "./About.module.css";
 
 export default function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const benefits = [
-    "Pensé pour les TPE, PME et freelances",
-    "Résout la perte de temps liée aux tâches manuelles",
-    "Centralise toutes vos données au même endroit",
-    "Facile à prendre en main, sans formation technique"
+    "Designed for freelancers, small businesses, and SMEs",
+    "Eliminates time wasted on manual tasks",
+    "Centralizes all your data in one place",
+    "Easy to use, no technical training required",
   ];
 
   return (
     <section id="about" className={styles.about}>
       <div className={`container ${styles.aboutContainer}`}>
-        
         <div className={styles.imageWrapper}>
           <div className={styles.abstractImage}>
             <div className={styles.glassCard}>
               <div className={styles.statLine}></div>
-              <div className={styles.statLine} style={{ width: '60%' }}></div>
-              <div className={styles.statLine} style={{ width: '80%' }}></div>
+              <div className={styles.statLine} style={{ width: "60%" }}></div>
+              <div className={styles.statLine} style={{ width: "80%" }}></div>
             </div>
             <div className={styles.circleDecoration}></div>
           </div>
         </div>
 
         <div className={styles.contentWrapper}>
-          <h2 className={styles.title}>Notre mission : Simplifier votre quotidien</h2>
-          
+          <h2 className={styles.title}>Our mission : Simplify your daily</h2>
+
           <p className={styles.description}>
-            Trop d'entreprises perdent un temps précieux à jongler entre des dizaines d'outils complexes. 
-            <strong> FlexSol</strong> est né d'un constat simple : la technologie doit s'adapter à vous, et non l'inverse.
+            Too many businesses waste precious time juggling dozens of complex
+            tools.
+            <strong> FlexSol</strong> was born from a simple realization:
+            technology should adapt to you, not the other way around.
           </p>
           <p className={styles.description}>
-            Nous avons créé une solution tout-en-un qui élimine les frictions numériques, vous permettant de vous concentrer sur ce qui compte vraiment : <strong>développer votre activité et satisfaire vos clients.</strong>
+            We created an all-in-one solution that eliminates digital friction,
+            allowing you to focus on what truly matters :{" "}
+            <strong>
+              growing your business and keeping your customers happy.
+            </strong>
           </p>
 
           <ul className={styles.benefitsList}>
             {benefits.map((benefit, index) => (
               <li key={index}>
-                <FontAwesomeIcon icon={faCheckCircle} className={styles.checkIcon} />
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className={styles.checkIcon}
+                />
                 <span>{benefit}</span>
               </li>
             ))}
           </ul>
-        </div>
 
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={styles.toggleBtn}
+          >
+            {isExpanded ? "Moins de détails" : "Plus de détails"}
+            <FontAwesomeIcon
+              icon={isExpanded ? faChevronUp : faChevronDown}
+              style={{ marginLeft: "8px" }}
+            />
+          </button>
+
+          {isExpanded && (
+            <div className={styles.hiddenContent}>
+              <p className={styles.description}>
+                En plus de ces avantages, notre équipe technique vous accompagne
+                7j/7. Nous déployons des mises à jour mensuelles basées sur vos
+                retours pour que l'outil évolue avec la croissance de votre
+                entreprise.
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

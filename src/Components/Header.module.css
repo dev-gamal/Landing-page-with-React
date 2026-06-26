@@ -4,12 +4,25 @@
   left: 0;
   right: 0;
   height: 70px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--bg-header);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
   display: flex;
   align-items: center;
+}
+
+.themeToggleBtn {
+  color: var(--text-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.themeToggleBtn:hover {
+  color: var(--primary);
 }
 
 .navContainer {

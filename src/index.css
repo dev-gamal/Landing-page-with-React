@@ -8,6 +8,16 @@
   --border: #e5e7eb;
   --container-width: 1200px;
   --transition: all 0.3s ease;
+  --bg-header: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] {
+  --bg-main: #111827;
+  --bg-alt: #1f2937;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --border: #374151;
+  --bg-header: rgba(17, 24, 39, 0.95);
 }
 
 *, *::before, *::after {

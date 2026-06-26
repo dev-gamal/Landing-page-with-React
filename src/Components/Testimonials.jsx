@@ -1,44 +1,48 @@
-import TestimonialCard from './TestimonialCard';
-import styles from './Testimonials.module.css';
+import TestimonialCard from "./TestimonialCard";
+import styles from "./Testimonials.module.css";
 
 export default function Testimonials() {
   const reviews = [
     {
       name: "Sophie Martin",
-      role: "Fondatrice",
+      role: "Founder",
       company: "DesignCo",
       initials: "SM",
-      feedback: "L'interface est d'une fluidité incroyable. Depuis que nous utilisons cette solution, notre équipe a gagné près de 15 heures par semaine sur des tâches administratives."
+      feedback:
+        "The interface is incredibly smooth. Since we started using this solution, our team has saved nearly 15 hours a week on administrative tasks.",
     },
     {
-      name: "Marc Dupont",
-      role: "Directeur des Opérations",
+      name: "Marc Clayton",
+      role: "Operations Director",
       company: "LogiTech Solutions",
       initials: "MD",
-      feedback: "La mise en place a été instantanée. J'avais des doutes sur l'intégration avec nos systèmes actuels, mais tout s'est fait naturellement, sans besoin de coder."
+      feedback:
+        "Setup was instantaneous. I had doubts about integrating it with our current systems, but everything synced naturally, with no coding required.",
     },
     {
-      name: "Léa Dubois",
+      name: "Lucy Thomas",
       role: "Freelance",
       company: "Consulting L.",
       initials: "LD",
-      feedback: "Je cherchais un outil simple pour centraliser mon activité sans payer pour des fonctionnalités que je n'utilise pas. FlexSol répond exactement à ce besoin."
-    }
+      feedback:
+        "I was looking for a simple tool to centralize my business without paying for features I don't use. DevSol is exactly what I needed.",
+    },
   ];
 
   return (
     <section id="testimonials" className={styles.testimonials}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Ils nous font confiance</h2>
+          <h2 className={styles.sectionTitle}>Trusted by</h2>
           <p className={styles.sectionSubtitle}>
-            Découvrez comment nos utilisateurs ont transformé leur manière de travailler grâce à notre solution.
+            Discover how our users have transformed the way they work thanks to
+            our solution.
           </p>
         </div>
 
         <div className={styles.grid}>
           {reviews.map((review, index) => (
-            <TestimonialCard 
+            <TestimonialCard
               key={index}
               name={review.name}
               role={review.role}
