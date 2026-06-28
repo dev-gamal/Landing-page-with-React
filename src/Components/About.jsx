@@ -64,7 +64,7 @@ export default function About() {
             onClick={() => setIsExpanded(!isExpanded)}
             className={styles.toggleBtn}
           >
-            {isExpanded ? "Moins de détails" : "Plus de détails"}
+            {isExpanded ? "Less details" : "More details"}
             <FontAwesomeIcon
               icon={isExpanded ? faChevronUp : faChevronDown}
               style={{ marginLeft: "8px" }}
@@ -74,10 +74,7 @@ export default function About() {
           {isExpanded && (
             <div className={styles.hiddenContent}>
               <p className={styles.description}>
-                En plus de ces avantages, notre équipe technique vous accompagne
-                7j/7. Nous déployons des mises à jour mensuelles basées sur vos
-                retours pour que l'outil évolue avec la croissance de votre
-                entreprise.
+                In addition to these benefits, our technical team supports you 7 days a week. We deploy monthly updates based on your feedback to ensure the tool evolves with your business growth.
               </p>
             </div>
           )}
